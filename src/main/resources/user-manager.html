@@ -1,7 +1,10 @@
 <page-template title="User Manager">
+	<div>
+		<a href="/user-search">User Search</a>
+	</div>
 	<form method="POST">
-		<div @loop:u="${userService.listUsers()}">
-			${formatName(u)} <button action="${userService.delete(u)}" label="Delete"/>
+		<div @loop:u="${UserService.listUsers()}">
+			${formatName(u)} <button action="${UserService.delete(u)}" label="Delete"/>
 		</div>
 
 		<h2>Create User</h2>

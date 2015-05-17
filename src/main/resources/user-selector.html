@@ -1,0 +1,8 @@
+<div class="user-selector">
+	<textbox value="${userSearch}"/>
+	<button action="${findUser()}" label="Search"/>
+	
+	<div @loop:result="${results}">
+		${result.name}
+	</div>
+</div>

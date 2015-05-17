@@ -17,3 +17,9 @@ html,body {
 	padding: 20px;
 	margin: 10px;
 }
+.stacktrace {
+	display: none;
+}
+.error:hover .stacktrace {
+	display: pre;
+}
