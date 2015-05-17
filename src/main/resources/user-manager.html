@@ -1,0 +1,12 @@
+<page-template title="User Manager">
+	<form method="POST">
+		<div @loop:u="${userService.listUsers()}">
+			${formatName(u)} <button action="${userService.delete(u)}" label="Delete"/>
+		</div>
+
+		<h2>Create User</h2>
+		<div>Name: <textbox value="${user.name}"/></div>
+		<div>Password: <textbox value="${user.password}"/></div>
+		<button action="${save(user)}" label="Add User"/>
+	</form>
+</page-template>
