@@ -4,7 +4,7 @@
 	</div>
 	<form method="POST">
 		<div @loop:u="${UserService.listUsers()}">
-			${formatName(u)} <button action="${UserService.delete(u)}" label="Delete"/>
+			<a href="/user-edit?id=${u.id}">${formatName(u)}</a> <button action="${UserService.delete(u)}" label="Delete"/>  
 		</div>
 
 		<h2>Create User</h2>

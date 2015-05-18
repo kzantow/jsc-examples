@@ -3,7 +3,7 @@ new function() {
 	
 	this.findUser = function() {
 		console.log('searching for ' + this.userSearch)
-		var users = userService.listUsers();
+		var users = UserService.listUsers();
 		var out = [];
 		for(var i = 0; i < users.length; i++) {
 			if(users[i].name.contains(this.userSearch)) {

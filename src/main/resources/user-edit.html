@@ -1,0 +1,10 @@
+<page-template title="User Edit">
+<user-admin-template title="User Edit">
+	<form method="POST">
+		<h2>Edit User</h2>
+		<div>Name: <textbox value="${user.name}"/></div>
+		<div>Password: <textbox value="${user.password}"/></div>
+		<button action="${save(user)}" label="Save"/>
+	</form>
+</user-admin-template>
+</page-template>
