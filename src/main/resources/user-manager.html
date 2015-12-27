@@ -3,13 +3,19 @@
 		<a href="/user-search">User Search</a>
 	</div>
 	<form method="POST">
-		<div @loop:u="${UserService.listUsers()}">
-			<a href="/user-edit?id=${u.id}">${formatName(u)}</a> <button action="${UserService.delete(u)}" label="Delete"/>  
+		<div class="users" @if="${!UserService.listUsers().isEmpty()}">
+			<h1>Users</h1>
+			<div @loop:u="${UserService.listUsers()}">
+				<a href="/user-edit?id=${u.id}">${formatName(u)}</a>
+				<div><button action="${UserService.delete(u)}" label="Delete"/></div>  
+			</div>
 		</div>
 
 		<h2>Create User</h2>
-		<div>Name: <textbox value="${user.name}"/></div>
-		<div>Password: <textbox value="${user.password}"/></div>
+		<div class="users">
+		<div><label>Name: </label><div><textbox value="${user.name}"/></div></div>
+		<div><label>Password: </label><div><textbox value="${user.password}"/></div></div>
+		</div>
 		<button action="${save(user)}" label="Add User"/>
 	</form>
 </page-template>

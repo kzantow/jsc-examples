@@ -23,3 +23,20 @@ html,body {
 .error:hover .stacktrace {
 	display: pre;
 }
+.users {
+	display: table;
+}
+.users > div {
+	display: table-row;
+}
+.users > div > * {
+	display: table-cell;
+	padding: 2px 2px 4px 0;
+}
+button, input[type=submit] {
+	padding: 4px 8px;
+}
+input[type=text],input[type=password] {
+	padding: 4px 8px;
+}
+}
